@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Poppins&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../public/image/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+  background-color: #00ffff;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.search {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+.btn-search {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+.container {
+  margin: 1rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  background-color: rgba(237, 116, 9, 0.884);
+  margin: 1rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie .poster-img {
+  width: 100%;
+  height: 250px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-details .card {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.movie-details .movie-title {
+  width: 180px;
+  text-align: center;
+}
+
+.title-about {
+  color: #f65a22;
+}
+
+.movie-details .about {
+  position: absolute;
+  background-color: #00ffff;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  opacity: 0.9;
+  color: #000;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(100%);
+}
+.overview .title-about {
+  text-align: center;
+  color: #d2691e;
+}
+.movie-details:hover .about {
+  transform: translateY(5%);
+}
+
+.rating {
+  background-color: rgba(255, 255, 255, 0.518);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.518);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+  }
+}
