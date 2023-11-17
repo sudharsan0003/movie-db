@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
+import { FaSearch } from 'react-icons/fa';
 
 let API_key = '&api_key=0a9a1d8f063cc7744ef307ec4172a7b4';
 let base_url = 'https://api.themoviedb.org/3';
 let url = base_url + '/movie/popular?' + API_key;
 
-const Main = () => {
+const Home = () => {
   const [data, setdata] = useState([]);
   const [url_set, seturl] = useState(url);
   const [query, setquery] = useState('');
@@ -34,20 +35,22 @@ const Main = () => {
   };
   return (
     <>
-      <div className='header'>
-        <form onSubmit={searchMovie}>
+      <div className='flex justify-center items-center -mt-14'>
+        <form onSubmit={searchMovie} className='mb-10'>
           <input
-            className='search'
+            className='p-2 rounded-full outline-none border-none '
             type='text'
             name='query'
             placeholder='Search Movies'
             value={query}
             onChange={changeHandler}
           ></input>
-          <button className='btn-search'>Search</button>
+          <button className='-ml-8 bg-orange-300 text-xl p-2 rounded-full '>
+            <FaSearch className='h-4 w-4 -mt-1 -ml-1' />
+          </button>
         </form>
       </div>
-      <div className='container'>
+      <div className='container '>
         {data.length == 0 ? (
           <p className='not-found'>Not Found</p>
         ) : (
@@ -60,4 +63,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

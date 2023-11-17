@@ -20,8 +20,3 @@ const Card = (movie) => {
 };
 
 export default Card;
-// API_key="&0a9a1d8f063cc7744ef307ec4172a7b4"
-// API_URL="https://api.themoviedb.org/3/movie/popular?api_key=0a9a1d8f063cc7744ef307ec4172a7b4"
-// API_IMG="https://image.tmdb.org/t/p/w500/"
-// API_URL="https://api.themoviedb.org/3/movie/popular?api_key=bcc4ff18c2939665232d75d8bf0ec093"
-// API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=0a9a1d8f063cc7744ef307ec4172a7b4&query
