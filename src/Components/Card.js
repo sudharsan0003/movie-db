@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import Model from 'react-modal';
+import { CiLogout } from 'react-icons/ci';
 
 const Card = (movie) => {
   const [show, setShow] = useState(false);
   let img_path = 'https://image.tmdb.org/t/p/w500';
   const [visible, setVisible] = useState(false);
   return (
-    <div className='movie'>
+    <div className='movie w-full h-full overflow-hidden'>
       <img src={img_path + movie.info.poster_path} className='poster-img' />
       <div className='movie-details'>
         <div className='card'>
@@ -20,33 +21,32 @@ const Card = (movie) => {
           <div className='flex justify-center items-center '>
             <Model
               isOpen={visible}
-              className='bg-blue-400 text-white w-[90%] h-[80%] mt-10 ml-10 '
+              className='bg-slate-300 text-black lg:w-[90%] lg:h-[90%] lg:mt-10 lg:ml-10 sm:h-[90%] sm:w-[60%]'
             >
+              <div className='m-5 flex justify-start '>
+                <button
+                  onClick={() => setVisible(false)}
+                  className='bg-white text-black rounded-full p-2  lg:mt-3 flex items-center gap-2 sm:m-1 sm:p-1 '
+                >
+                  <span>Back to</span>
+                  <CiLogout className='h-8 w-8 sm:h-4 ' />
+                </button>
+              </div>
+
               <div className='flex justify-center items-center'>
                 <img
                   src={img_path + movie.info.poster_path}
-                  className='h-60 w-60 mt-5 mb-5 '
+                  className='h-60 w-60 mt-5 mb-5 sm:-mt-3 '
                 />
               </div>
               <div>
                 <div className='flex flex-row justify-center items-center gap-5'>
-                  <h4 className='font-semibold text-center '>
+                  <h4 className='font-semibold text-center lg:mt-1 sm:-mt-5 '>
                     {movie.info.title}
                   </h4>
-                  <p className='h-9 w-9 bg-slate-300 rounded-full  p-3 flex text-black justify-center items-center'>
-                    {movie.info.vote_average.toFixed()}
-                  </p>
                 </div>
               </div>
-              <h4 className='ml-10 mt-3 '>{movie.info.overview}</h4>
-              <div className='m-5 flex justify-center items-center'>
-                <button
-                  onClick={() => setVisible(false)}
-                  className='bg-yellow-300 text-black rounded-full p-2 mb-5'
-                >
-                  Back to Home
-                </button>
-              </div>
+              <h4 className='ml-10 lg:mt-1 sm:mt-1 '>{movie.info.overview}</h4>
             </Model>
           </div>
         </div>

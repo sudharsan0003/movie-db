@@ -35,7 +35,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className='flex justify-center items-center -mt-14'>
+      <div className='flex justify-center items-center md:-mt-14 sm:mt-3 sm:-mb-14 '>
         <form onSubmit={searchMovie} className='mb-10'>
           <input
             className='p-2 rounded-full outline-none border-none '
