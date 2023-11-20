@@ -13,7 +13,7 @@ const Footer = () => {
               className='sm:h-14 sm:w-16 sm:-ml-24 lg:h-20 lg:w-28 '
             />
           </div>
-          <div className='flex flex-row gap-10 mt-10  px-36 sm:justify-start sm:gap-5 sm:-ml-40 lg:justify-end lg:gap-24 lg:-mt-5 '>
+          <div className='flex flex-row  mt-10  px-36 sm:justify-start sm:gap-5 sm:-ml-52 lg:justify-end lg:gap-24 lg:-mt-5 '>
             <Link to='/about'>
               <p>About</p>
             </Link>
