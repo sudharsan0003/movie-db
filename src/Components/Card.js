@@ -15,7 +15,6 @@ const Card = (movie) => {
           <h4 className='movie-title'>{movie.info.title}</h4>
           <p className='rating'>{movie.info.vote_average.toFixed()}</p>
         </div>
-
         <div>
           <button onClick={() => setVisible(true)}>About</button>
           <div className='flex justify-center items-center '>
@@ -37,6 +36,7 @@ const Card = (movie) => {
                 <img
                   src={img_path + movie.info.poster_path}
                   className='h-60 w-60 mt-5 mb-5 sm:-mt-3 '
+                  alt='img'
                 />
               </div>
               <div>

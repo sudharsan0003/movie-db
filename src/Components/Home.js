@@ -26,6 +26,7 @@ const Home = () => {
       const res = await fetch(finalurl);
       const data = await res.json();
       setdata(data.results);
+      setquery('');
     } catch (e) {
       console.log(e);
     }
