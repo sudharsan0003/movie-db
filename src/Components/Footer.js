@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    window.location.reload();
+  };
+
   return (
     <div>
       <div className='w-full text-center flex flex-col items-center justify-center '>
@@ -14,18 +20,18 @@ const Footer = () => {
             />
           </div>
           <div className='flex flex-row  mt-10  px-36 sm:justify-start sm:gap-5 sm:-ml-52 lg:justify-end lg:gap-24 lg:-mt-5 '>
-            <Link to='/about'>
+            <button onClick={handleSubmit}>
               <p>About</p>
-            </Link>
-            <Link to='/about'>
+            </button>
+            <button onClick={handleSubmit}>
               <p>Privacy</p>
-            </Link>
-            <Link to='/about'>
+            </button>
+            <button onClick={handleSubmit}>
               <p>FAQ</p>
-            </Link>
-            <Link to='/about'>
+            </button>
+            <button onClick={handleSubmit}>
               <p>Contact</p>
-            </Link>
+            </button>
           </div>
         </div>
         <p className='p-3'>© 2023 Movie Database™</p>
