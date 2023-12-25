@@ -99,6 +99,10 @@ body {
   transform: translateX(5%);
 }
 
+#model {
+  background-color: #000;
+}
+
 .rating {
   background-color: rgba(255, 255, 255, 0.518);
   padding: 10px;
