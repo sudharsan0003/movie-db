@@ -5,7 +5,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    window.location.reload();
+    navigate('/about');
   };
 
   return (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import { FaSearch } from 'react-icons/fa';
+import Footer from './Footer';
 
 let API_key = '&api_key=0a9a1d8f063cc7744ef307ec4172a7b4';
 let base_url = 'https://api.themoviedb.org/3';
@@ -60,6 +61,7 @@ const Home = () => {
           })
         )}
       </div>
+      <Footer />
     </>
   );
 };
